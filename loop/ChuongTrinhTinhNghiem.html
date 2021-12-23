@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+</head>
+
+<body>
+	<h1>Chương trình tính số nghiệm của phương trình bậc 2</h1>
+
+	<script type="text/javascript">
+		// Nhập 3 số a, b c
+
+		//Nếu delta > 0, thông báo "Phương trình có 2 nghiệm phân biệt".
+
+		// Nếu delta < 0, thông báo "Phương trình vô nghiệm".
+
+		// Nếu delta = 0, thông báo "Phương trình có 1 nghiệm duy nhất".
+		// ax^2 + bx + c = 0;....
+
+		var a, b, c;
+		do {
+			a = prompt("Mời bạn nhập số a:", "");
+		}
+		while (a == 0)
+		b = prompt("Mời bạn nhập số b:", "");
+		c = prompt("Mời bạn nhập số c:", "");
+		delta = b * b - 4 * a * c;
+		k = (-b) / (2 *a);
+		d1 = (-b + Math.sqrt(delta)) / (2 * a);
+		d2 = (-b - Math.sqrt(delta)) / (2 * a);
+		if (delta < 0) {
+			document.write('Phương trình vô nghiệm');
+		}
+		else if (delta == 0) {
+			document.write('Phương trình có nghiệm kép x1 = x2 =' + k);
+		}
+		else {
+			document.write('Phương trình có 2 nghiệm phân biệt' + '<br>');
+			document.write('x1 = ' + d1 + '<br>');
+			document.write('x2 = ' + d2);
+		}
+
+	</script>
+
+</body>
+
+</html>
