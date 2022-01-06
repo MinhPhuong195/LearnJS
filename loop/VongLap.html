@@ -1,34 +1,202 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3c.org/1999/xhtml">
+<!--      Phạm vi của var
+
+Phạm vi về cơ bản có nghĩa là nơi các biến này có sẵn để sử dụng. 
+Khai báo var là phạm vi toàn cầu hoặc chức năng / phạm vi cục bộ. 
+Nó có phạm vi toàn cầu khi một biến var được khai báo bên ngoài một hàm. 
+Điều này có nghĩa là bất kỳ biến nào được khai báo với var bên ngoài một khối chức năng đều có sẵn để sử dụng trong toàn bộ cửa sổ. 
+var là phạm vi hàm khi nó được khai báo trong một hàm. Điều này có nghĩa là nó có sẵn và chỉ có thể được truy cập trong chức năng đó.
+
+Các biến var có thể được khai báo lại và cập nhật
+
+Khai báo var là phạm vi toàn cục hoặc phạm vi chức năng trong khi let và const là phạm vi khối.
+Các biến var có thể được cập nhật và khai báo lại trong phạm vi của nó; biến let có thể được cập nhật nhưng không được khai báo lại; Các biến const không thể được cập nhật hoặc khai báo lại.
+Tất cả chúng đều được nâng lên đầu phạm vi của chúng. Nhưng trong khi các biến var được khởi tạo với các biến undefined, let và const không được khởi tạo.
+Trong khi var và let có thể được khai báo mà không được khởi tạo, thì const phải được khởi tạo trong khi khai báo.
+
+------------------------------Boolean-------------------------------------------------------------------------------
+Boolean là một kiểu dữ liệu trả về một trong hai giá trị, tức là đúng hoặc sai. 
+Trong JavaScript, Boolean được sử dụng như một hàm để nhận giá trị của một biến,
+đối tượng, điều kiện, biểu thức, v.v. theo đúng hoặc sai.
+
+ -->
+<!-- </div> -->
+
+<!-- <div id = "p5Canvas"></div> -->
 
 </html>
+<script src="js/p5.min.js"></script>
+<script src="js/p5.play_patch119.js"></script>
+<script src="p5.turtle.js"></script>
+
 <script>
     // Eg
-        for (let i = 0; i < 50; i++) {
-            console.log("Welcome to C4EJS Course!")
-        }
+    // for (let i = 0; i < 50; i++) {
+    //     console.log("Welcome to C4EJS Course!")
+    // }
     //
     // for (let i = 0; i < 50; i++) {
     //     console.log(i, "Welcome to C4EJS Course!")
     // }
 
-  // 1.Viết chương trình in ra màn hình các số từ 0 đến 100 
-    // for (let i = 0; i <= 100; i++) {
+
+
+    // 2.Viết chương trình in ra màn hình các số từ 100 đến 1
+    // for (let i = 100; i >= 0; i--){
+    //   document.write(i + ' ; ');
+    // }
+
+    // 3.Viết chương trình in ra màn hình các số chia hết cho 5 trong khoảng từ 5 đến 70
+    // for (let i = 5; i <= 70; i++) {
+    //       // nếu i không chia hết cho 5 thì quay lại vòng lặp for
+    //       if (i % 5 != 0) {
+    //           continue;
+    //       }
+    //      console.log(i)
+    // }
+    //---------------------------------------------------------------------------------
+
+    // BÀI 3a -- Viết chương trình in ra màn hình các số từ 0 đến 7 -- 
+    // for (let i = 0; i < 7; i++) {
     //     console.log(i)
     // }
 
-  // 2.Viết chương trình in ra màn hình các số từ 100 đến 1
-      // for (let i = 100; i >= 0; i--){
-      //   document.write(i + ' ; ');
-      // }
 
-  // 3.Viết chương trình in ra màn hình các số chia hết cho 5 trong khoảng từ 5 đến 70
-        // for (let i = 5; i <= 70; i++) {
-        //       // nếu i không chia hết cho 5 thì quay lại vòng lặp for
-        //       if (i % 5 != 0) {
-        //           continue;
-        //       }
-        //      console.log(i)
+    //Bai 3b -- n numbers, starting from 0, n entered by user
+    // var number = prompt(" your number: " )
+
+    // var result = '';
+    // for (var i = 1; i <= number; i++){
+    //     result += i + '   ';
+    // }
+    // console.log(result)
+
+    //Bai 3c -- A sequence of numbers, starting from 3, ending before n, n entered by user
+
+    // var number = prompt(" your number: " )
+
+    // var result = '';
+    // for (var i = 3; i <= number; i++){
+    //     result += i + '   ';
+    // }
+    // console.log(result)
+
+    //Bai 3d -- A sequence of numbers, starting from c, ending before n, c and n entered by user
+
+    // var c = prompt(" your first number: " )
+    // var n = prompt(" your last number: " )
+
+    // var result = '';
+    // for (var i = c ; i < n; i++){
+    //     result += i + '  ';
+    // }
+    // console.log(result)
+
+    //Bai 3e -- A sequence of numbers, starting from c, ending before n, stepping by 3, c and n entered by user
+
+    // var c = prompt(" your first number: " )
+    // var n = prompt(" your last number: " )
+
+    // var result = '';
+    // for (var i = c ; i < n; i=i+3 ){
+    //     result += i +' ';
+    // }
+    // console.log(result)
+
+
+    //Bai4 -- Write a program to calculate the factorial of n: (1 * 2 * 3 *... *n), n enter by user
+    // var x = prompt('Nhap x:');
+    // var fact = 1;
+    // for (i = 1; i <= x; i++) {
+    //     fact = fact * i;
+    // }
+    // console.log(fact);
+
+    //Bai5 -- Write a program asking users their age, and then decide if they are old enough to view a 14+ content
+    // let age = prompt("Your age? ")
+
+    // if (age < 14) {
+    //     console.log("You are not old enough to view this content!");
+    // } else {
+    //     console.log("Enjoy!");
+    // }
+
+    //Bai6 -- Write a program asking user to enter a number, x, then check if x is in the lower half or higher half of 0 - 9 range
+
+    // var x = prompt('Nhap x:');
+    // if(x< (9-0)/2){
+    //     console.log(x + " lower half of 9!");
+    // }
+    // else{
+    //     console.log(x+ " higher half of 9!");
+    // }
+
+    //Bai7 -- Write a program asking user to enter two numbers, x and n, then check if x is in lower half or higher half of n
+
+    // var x = prompt('Nhap x:');
+    // var n = prompt('Nhap n:');
+    // if(x<n/2){
+    //     console.log(x + " is lower half of " + n)
+    // }
+    // else{
+    //     console.log(x + " is higher half of " + n)
+    // }
+
+    //Bai8 -- Write a script to check if a number is even (divisible by 2) or odd number
+
+    // var a = prompt('Nhap a :')
+    //     if (a % 2 != 0) {
+    //         console.log(a + " is odd")
+    //     }
+    //     else{
+    //         console.log(a + " is even")
+    //     }
+
+    //Bai9. --Write a program to print out
+    //a--6 L’s and H’s, half L’s, half H’s (L means low, H means high)
+        // var x = 'L'
+        // var y = 'H'
+        // for (let i = 0; i < 3; i++) {
+        //     console.log(x,y)
         // }
+
+
+    //c, -- 8 1’s and 0’s in total, consecutively
+    var x = '0 1'
+    for (let i = 0; i < 8; i++) {
+            console.log(i, x)
+        }
+
+    // var x = 0 
+    // var y= 1 
+    // for (let i = 0; i < 8; i++) {
+    //     console.log(i,x,y)
+    // }
+
+    // var x = 0 
+    // var y= 1 
+    // var n = prompt('Nhap n:')
+    // for (let i = 0; i < n; i++) {
+    //     console.log(i,x,y)
+    // }
+
+
+  //Hien thi dialog -> cho phep nhap gia tri cua N
+	// var N = prompt('Nhap gia tri N')
+	// //Chuyen kieu du lieu cua N tu string toi int
+	// N = parseInt(N)
+	// //xay dung do cao cua hinh tam giac
+	// for(i=0;i<N;i++) {
+	// 	//tao hang (row) *
+	// 	for(j=0;j<=i;j++) {
+	// 		document.writeln("_")
+	// 	}
+
+	// 	//xuong dong khi hien thi ket qua cua tung hang
+	// 	document.writeln("<br/>")
+	// }
+
+
 
 </script>
